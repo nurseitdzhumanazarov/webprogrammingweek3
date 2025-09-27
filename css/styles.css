@@ -1,0 +1,178 @@
+/* ==============================
+   Base Styles (for all pages)
+   ============================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #e4e9eb;
+  color: #f0e4e4;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Skip to content link - for accessibility (all pages) */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #3380b4;
+  color: #d51515;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ==============================
+   Header Styles (Mostly for index.html)
+   ============================== */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(90deg, #dae0e6, #3981c8);
+  color: rgb(0, 0, 0);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* ==============================
+   Navigation Styles (index.html)
+   ============================== */
+nav {
+  background: #eddada;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+nav ul li {
+  position: relative;
+}
+
+/* Dropdown menu for exercises */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #0f8853;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 6px rgba(163, 173, 177, 0.2);
+  border-radius: 6px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  padding: 0.2rem 1rem;
+}
+
+nav ul li a:hover {
+  color: #4a90e2;
+  text-decoration: underline;
+}
+
+/* ==============================
+   Main Content (index.html)
+   ============================== */
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* Hero image (index.html) */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.my-photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(238, 229, 229, 0.15);
+}
+
+/* ==============================
+   Footer (all pages)
+   ============================== */
+footer {
+  text-align: center;
+  background: #e4dcdc;
+  color: #ffffff;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+/* ==============================
+   Responsive Styles (all pages)
+   ============================== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  nav ul li ul {
+    position: static;
+    box-shadow: none;
+  }
+}
+
+/* ==============================
+   Dark Mode (all pages)
+   ============================== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #f4f4f4;
+    color: #000000;
+  }
+  nav {
+    background: #f3eded;
+  }
+  footer {
+    background: #05c6f6;
+  }
+}
+
+/* ==============================
+   Exercise-Specific Styles (for ex1.html – ex15.html)
+   ============================== */
+/* Example: Exercise 1 */
+.ex1-example {
+  border: 2px dashed #0777ed;
+  padding: 1rem;
+}
+
+/* Example: Exercise 8 Flexbox Nav */
+.ex8-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
